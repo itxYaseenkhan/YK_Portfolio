@@ -1,51 +1,18 @@
-// {
-//   "dependencies": {
-//     "bcrypt": "^6.0.0",
-//     "cloudinary": "^2.7.0",
-//     "cookie-parser": "^1.4.7",
-//     "cors": "^2.8.5",
-//     "dotenv": "^17.2.0",
-//     "express": "^5.1.0",
-//     "express-fileupload": "^1.5.2",
-//     "jsonwebtoken": "^9.0.2",
-//     "mongoose": "^8.16.4",
-//     "nodemailer": "^7.0.5"
-//   },
-//   "name": "backend",
-//   "version": "1.0.0",
-//   "main": "index.js",
-//   "type": "module",
-//   "scripts": {
-//     "Start ": "node Server.js",
-//     "Dev": "nodemon Server.js"
-//   },
-//   "author": "",
-//   "license": "ISC",
-//   "description": ""
-// }
-
 {
-  "name": "backend",
+  "name": "yk-portfolio-backend",
   "version": "1.0.0",
-  "main": "Server.js",
   "type": "module",
+  "main": "Server.js",
   "scripts": {
     "start": "node Server.js",
     "dev": "nodemon Server.js"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
-    "cloudinary": "^2.7.0",
-    "cookie-parser": "^1.4.7",
+    "cloudinary": "^2.0.0",
     "cors": "^2.8.5",
-    "dotenv": "^17.2.0",
-    "express": "^5.1.0",
-    "express-fileupload": "^1.5.2",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.16.4",
-    "nodemailer": "^7.0.5"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": ""
+    "dotenv": "^16.0.0",
+    "express": "^5.0.0",
+    "mongoose": "^8.0.0"
+  }
 }

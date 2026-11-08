@@ -11,7 +11,7 @@ import timelineRouter from "./router/timelineRouter.js"
 import  skillRoute  from "./router/skillRoute.js";
 import ProjectRoute from "./router/ProjectRoute.js";
 import AboutRouter from "./router/AboutRouter.js";
-import { createDefault } from "./utils/createDefaul.js";
+
 
  
 const app = express();
@@ -52,7 +52,6 @@ app.use("/api/v1/ProjectRoute", ProjectRoute);
 app.use("/api/v1/AboutRouter", AboutRouter);
 
 await DbConnect();
-await createDefault();
 app.use(errorMiddleware);
 
 
