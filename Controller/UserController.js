@@ -70,20 +70,31 @@ export const register = catchAsyncError(async (req, res, next) => {
 
 
 export const login = catchAsyncError(async (req, res, next) => {
-    const { email, Password } = req.body;
-    if (!email || !Password) {
-      return next(new ErrorHandler("Provide Email And Password!", 400));
-    }
-    const user = await User.findOne({ email }).select("+Password");
-    if (!user) {
-      return next(new ErrorHandler("Invalid Email Or Password!", 404));
-    }
-    const isPasswordMatched = await user.comparePassword(Password);
-    if (!isPasswordMatched) {
-      return next(new ErrorHandler("Invalid Email Or Password", 401));
-    }
-    generateToken(user, "Login Successfully!", 200, res);
-  });
+  const { email, Password } = req.body;
+
+  if (!email || !Password) {
+    return next(new ErrorHandler("Provide Email And Password!", 400));
+  }
+
+  const user = await User.findOne({ email }).select("+Password");
+
+  if (!user) {
+    return next(new ErrorHandler("Invalid Email Or Password!", 404));
+  }
+
+  console.log("User found:", !!user);
+  console.log("Password exists:", !!user.Password);
+
+  const isPasswordMatched = await user.comparePassword(Password);
+
+  console.log("Password matched:", isPasswordMatched);
+
+  if (!isPasswordMatched) {
+    return next(new ErrorHandler("Invalid Email Or Password!", 401));
+  }
+
+  return generateToken(user, "Login Successfully!", 200, res);
+});
 
 
   export const getUser = catchAsyncError(async (req, res, next) => {
