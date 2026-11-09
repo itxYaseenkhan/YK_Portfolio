@@ -13,7 +13,7 @@ import timelineRouter from "./router/timelineRouter.js";
 import skillRoute from "./router/skillRoute.js";
 import ProjectRoute from "./router/ProjectRoute.js";
 import AboutRouter from "./router/AboutRouter.js";
-import {createDefualt} from "./utils/createDefualt.js";
+import createDefault from "./utils/createDefualt.js";
 
 dotenv.config({ path: "./config/config.env" });
 
@@ -51,7 +51,7 @@ app.use("/api/v1/AboutRouter", AboutRouter);
 
 // Database connection
 await DbConnect();
-await createDefualt();
+await createDefault();
 
 // Error middleware must be after routes
 app.use(errorMiddleware);
