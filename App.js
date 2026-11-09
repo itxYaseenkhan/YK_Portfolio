@@ -12,7 +12,7 @@ import timelineRouter from "./router/timelineRouter.js";
 import skillRoute from "./router/skillRoute.js";
 import ProjectRoute from "./router/ProjectRoute.js";
 import AboutRouter from "./router/AboutRouter.js";
-import { createDefault } from "./utils/createDefault.js";
+
 
 dotenv.config({ path: "./config/config.env" });
 
@@ -56,6 +56,6 @@ app.use(errorMiddleware);
 
 // Connect database before starting server
 await DbConnect();
-createDefault();
+
 
 export default app;
