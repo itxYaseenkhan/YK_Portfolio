@@ -3,7 +3,6 @@ import dotenv from "dotenv";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import fileUpload from "express-fileupload";
-import { User } from "../models/UserSchema.js";
 import DbConnect from "./database/DbConnect.js";
 import messageRouter from "./router/messageRouter.js";
 import { errorMiddleware } from "./middlewares/error.js";
