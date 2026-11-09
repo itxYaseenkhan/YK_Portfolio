@@ -56,6 +56,6 @@ app.use(errorMiddleware);
 
 // Connect database before starting server
 await DbConnect();
-await createDefault();
+createDefault();
 
 export default app;
