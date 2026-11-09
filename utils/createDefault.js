@@ -30,15 +30,15 @@ const createDefault = async () => {
         "Node.js Developer"
       ],
 
-      avatar: {
-        public_id: "",
-        url: ""
-      },
+     avatar: {
+  public_id: "default_avatar",
+  url: "https://res.cloudinary.com/demo/image/upload/sample.jpg"
+},
 
-      resume: {
-        public_id: "",
-        url: ""
-      }
+resume: {
+  public_id: "default_resume",
+  url: "https://example.com/default-resume.pdf"
+}
     });
 
     console.log("Default User Created Successfully!");
